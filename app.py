@@ -76,14 +76,6 @@ with sekme1:
             st.success("0.5L su eklendi! 💧")
             st.rerun()
             
-    with col_h2:
-        if st.button("🚬 Sigara Harcaması (-120 TL)"):
-            yeni_hizli = pd.DataFrame([{"Tarih": bugun_tarih, "Modul": "Finans", "Detay_1": "Market / Gıda", "Detay_2": "Nakit", "Deger": 120.0, "Notlar": "Hızlı sigara harcaması"}])
-            df = pd.concat([df, yeni_hizli], ignore_index=True)
-            df.to_csv(DATA_FILE, index=False)
-            st.success("120 TL sigara harcaması eklendi! 🚬")
-            st.rerun()
-            
     with col_h3:
         if st.button("🏋️ Antrenman Tamamlandı"):
             yeni_hizli = pd.DataFrame([{"Tarih": bugun_tarih, "Modul": "Spor", "Detay_1": "Ağırlık / Fitness", "Detay_2": "Standart İdman", "Deger": 9.0, "Notlar": "Hızlı spor kaydı"}])
